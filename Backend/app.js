@@ -2,6 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const app = express();
+const path = require('path');
 
 
 app.use(express.json());
@@ -31,5 +32,13 @@ app.use('/api/payment', paymentRouter);
 
 const agentRouter = require('./routes/agent.routes');
 app.use('/api/agent', agentRouter)
+
+const frontendPath = path.join(__dirname,  '../Frontend/vite-project/dist');
+
+app.use(express.static(frontendPath));
+
+app.get('/{*splat}', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'index.html'));
+});
 
 module.exports = app;
