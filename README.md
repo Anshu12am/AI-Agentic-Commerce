@@ -2,6 +2,9 @@
 
 ShopAgent is an AI-powered **agentic commerce platform** built with the MERN stack.
 
+🎥 **[Watch Project Demo](https://youtu.be/oJzK8y5nM88)**
+
+
 Unlike a traditional e-commerce application where users manually search, filter, and select products, ShopAgent uses an **AI shopping agent** to understand the user's intent and assist throughout the shopping journey.
 
 The agent can understand natural-language shopping requirements, discover relevant products, provide explainable recommendations, assist with cart-related actions, and guide users toward checkout.
